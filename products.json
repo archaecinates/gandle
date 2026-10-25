@@ -1,0 +1,30 @@
+[
+  {
+    "id": "tu-bw",
+    "name": "Paket Tu.bw",
+    "desc": "Ganci dengan 1 karakter tidak berwarna",
+    "price": 12000,
+    "img": "images/3.png"
+  },
+  {
+    "id": "tu-na",
+    "name": "Paket Tu.na",
+    "desc": "Ganci dengan 1 karakter berwarna",
+    "price": 13000,
+    "img": "images/2.png"
+  },
+  {
+    "id": "wa-bw",
+    "name": "Paket Wa.bw",
+    "desc": "Ganci dengan 2 karakter tidak berwarna",
+    "price": 18000,
+    "img": "images/4.png"
+  },
+  {
+    "id": "wa-na",
+    "name": "Paket Wa.na",
+    "desc": "Ganci dengan 2 karakter berwarna",
+    "price": 21000,
+    "img": "images/5.png"
+  }
+]

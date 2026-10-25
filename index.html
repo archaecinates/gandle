@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gandle - Turn your fav person or anything else into doodle">
+    <meta name="author" content="Nada">
+    <title>Gandle - Ganci Doodle Custom</title>
+    <link rel="icon" href="images/sticker gandle.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <nav class="nav container" aria-label="Navigasi utama">
+        <a class="logo" href="index.html">
+            <img src="images/sticker gandle.png" alt="Gandle">
+        </a>
+        <div class="nav-links">
+            <a href="#katalog">Katalog</a>
+            <a href="about.html">Tentang</a>
+            <button id="cart-btn" class="cart-btn" type="button">Keranjang <span id="cart-count">0</span></button>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-text">
+            <h1 id="hero-title"><span class="hl-w">LET'S</span><span>TURN YOUR</span>FAV INTO<span class="hl-y"> DOODLE </span></h1>
+            <p>Turn your fav person or anything else into doodle. Ganci custom, lucu, dan dibuat khusus untukmu</p>
+            <a class="button pill" href="#katalog">
+                <svg class="button-cosm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+                    aria-hidden="true"></svg>
+
+                <svg class="highlight" viewBox="0 0 144.75738 77.18431" preserveAspectRatio="none" aria-hidden="true">
+                    <path
+                        d="M180.02826,169.45123c0,0 12.65228,-25.55115 24.2441,-25.66863c6.39271,-0.06479 -5.89143,46.12943 4.90937,50.63857c10.22345,4.2681 24.14292,-52.38336 37.86455,-59.80493c3.31715,-1.79413 -5.35094,45.88889 -0.78872,58.34589c5.19371,14.18125 33.36934,-58.38221 36.43049,-56.91633c4.67078,2.23667 -0.06338,44.42744 5.22574,47.53647c6.04041,3.55065 19.87185,-20.77286 19.87185,-20.77286"
+                        transform="translate(-171.52826,-126.11624)" />
+                </svg>
+
+                <span>beli sekarang yok!</span>
+            </a>
+        </div>
+        <div class="hero-art">
+            <span class="star s1" aria-hidden="true">&#10022;</span>
+            <span class="star s2" aria-hidden="true">&#10022;</span>
+            <span class="star s3" aria-hidden="true">&#10022;</span>
+            <img src="images/n2.png" width="1080" height="1080" alt="Ganci Gandle berisi doodle dua karakter berwarna">
+        </div>
+    </section>
+
+    <div class="band">
+        <div class="band-track" id="bandTrack">
+            <span>Gandle</span>
+            <span>Doodle Art</span>
+            <span>Handmade</span>
+            <span>Ganci Custom</span>
+            <span>Since 2026</span>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="catalog-layout" id="katalog" aria-labelledby="judul-katalog">
+            <div class="catalog-content">
+                <div class="catalog-heading">
+                    <h2 class="section-title" id="judul-katalog">Gass buat sekarang</h2>
+                    <p>Tertarik membuat ganci doodle sendiri? Pilih paketnya, masukkan keranjang</p>
+                </div>
+                <div class="card catalog-cards" id="catalog" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gandle Made by Nata and Nada</p>
+    </footer>
+
+    <div id="overlay" class="overlay" hidden></div>
+
+    <aside id="cart" class="drawer" aria-label="Keranjang belanja" aria-hidden="true">
+        <div class="drawer-head">
+            <h2>Keranjang</h2>
+            <button id="cart-close" class="icon-btn" type="button" aria-label="Tutup keranjang">&times;</button>
+        </div>
+        <div id="cart-items" class="drawer-body"></div>
+        <div class="drawer-foot">
+            <div class="total-row"><span>Total</span><strong id="cart-total">Rp0</strong></div>
+            <button id="checkout-btn" class="btn" type="button">Checkout</button>
+            <button id="clear-btn" class="btn-ghost" type="button">Kosongkan keranjang</button>
+        </div>
+    </aside>
+
+    <dialog id="checkout" class="modal" aria-labelledby="co-title">
+        <form id="co-form" novalidate>
+            <div class="drawer-head">
+                <h2 id="co-title">Checkout</h2>
+                <button type="button" class="icon-btn" data-close aria-label="Tutup">&times;</button>
+            </div>
+            <div class="quick-profile" id="quick-profile">
+                <div class="profile-copy">
+                </div>
+                <div class="profile-grid">
+                    <label>Nama <input name="name" autocomplete="name" placeholder="Nama kamu" required></label>
+                    <label>Nomor WhatsApp <input name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                            placeholder="08xxxxxxxxxx" required></label>
+                </div>
+                <button type="button" class="profile-edit" id="profile-clear" hidden>Ganti data diri</button>
+            </div>
+            <div id="co-summary" class="co-summary"></div>
+            <label>Alamat pengiriman untuk Menentukan Lokasi COD <textarea name="address" rows="3"
+                    autocomplete="street-address" placeholder="Alamat lengkap untuk pengiriman"
+                    required></textarea></label>
+            <div class="checkout-section order-custom-section">
+                <div class="field-heading"><strong>Detail tiap pesanan</strong><span>Catatan & foto mengikuti tipe
+                        ganci</span></div>
+                <div id="co-items-detail" class="co-items-detail"></div>
+            </div>
+            <div class="checkout-section">
+                <div class="field-heading"><strong>Metode pembayaran</strong><span>Pilih salah satu</span></div>
+                <label>Metode pembayaran
+                    <select name="payment" id="payment-method" required>
+                        <option value="QRIS">QRIS</option>
+                        <option value="Cash">Cash</option>
+                    </select>
+                </label>
+                <div id="qris-proof-wrap" class="qris-proof">
+                    <div class="payment-info"><strong>📱 Pembayaran QRIS</strong><span>Silakan bayar sesuai total
+                            pesanan, lalu upload bukti pembayarannya</span></div>
+                    <label class="upload-box upload-box-small">
+                        <input name="qrisProof" id="qris-proof" type="file" accept="image/*">
+                        <span class="upload-icon">↥</span>
+                        <span><strong>Upload bukti pembayaran</strong><small>Wajib untuk pembayaran QRIS dalam bentuk
+                                JPG, PNG, maksimal 5 MB</small></span>
+                    </label>
+                    <div id="qris-preview" class="single-preview" aria-live="polite"></div>
+                </div>
+            </div>
+
+            <p id="co-error" class="form-error" role="alert"></p>
+            <button id="co-submit" class="btn" type="submit">Pesan sekarang</button>
+        </form>
+        <div id="co-done" class="co-done" hidden></div>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js" defer></script>
+</body>
+</html>
