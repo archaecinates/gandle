@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,15 @@
     <link rel="icon" href="images/sticker gandle.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="shop.css">
 </head>
+
 <body>
     <nav class="nav container" aria-label="Navigasi utama">
         <a class="logo" href="index.html">
@@ -33,7 +38,8 @@
 
     <section class="hero container" aria-labelledby="hero-title">
         <div class="hero-text">
-            <h1 id="hero-title"><span class="hl-w">LET'S</span><span>TURN YOUR</span>FAV INTO<span class="hl-y"> DOODLE </span></h1>
+            <h1 id="hero-title"><span class="hl-w">LET'S</span><span>TURN YOUR</span>FAV INTO<span class="hl-y"> DOODLE
+                </span></h1>
             <p>Turn your fav person or anything else into doodle. Ganci custom, lucu, dan dibuat khusus untukmu</p>
             <a class="button pill" href="#katalog">
                 <svg class="button-cosm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
@@ -131,15 +137,31 @@
                     </select>
                 </label>
                 <div id="qris-proof-wrap" class="qris-proof">
-                    <div class="payment-info"><strong>📱 Pembayaran QRIS</strong><span>Silakan bayar sesuai total
-                            pesanan, lalu upload bukti pembayarannya</span></div>
+
+                    <div class="payment-info">
+                        <strong>Pembayaran QRIS</strong>
+                        <span>Scan QRIS di bawah untuk melakukan pembayaran sesuai total pesanan.</span>
+                    </div>
+
+                    <div class="qris-code-box">
+                        <img src="images/qris.jpeg" alt="QRIS Gandle" class="qris-code-image">
+                    </div>
+
+                    <div class="qris-instruction">
+                        Setelah pembayaran berhasil, upload bukti pembayaran di bawah ini.
+                    </div>
+
                     <label class="upload-box upload-box-small">
                         <input name="qrisProof" id="qris-proof" type="file" accept="image/*">
                         <span class="upload-icon">↥</span>
-                        <span><strong>Upload bukti pembayaran</strong><small>Wajib untuk pembayaran QRIS dalam bentuk
-                                JPG, PNG, maksimal 5 MB</small></span>
+                        <span>
+                            <strong>Upload bukti pembayaran</strong>
+                            <small>Wajib untuk pembayaran QRIS dalam bentuk JPG, PNG, maksimal 5 MB</small>
+                        </span>
                     </label>
+
                     <div id="qris-preview" class="single-preview" aria-live="polite"></div>
+
                 </div>
             </div>
 
@@ -152,4 +174,5 @@
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
     <script src="script.js" defer></script>
 </body>
+
 </html>
